@@ -1,5 +1,5 @@
 from sys import maxsize
-#Create a
+
 def createStack():
     Stack = []
     return Stack
@@ -23,5 +23,5 @@ push(stk, 10)
 push(stk, 20)
 pop(stk)
 
-#############push is not working
+
 
