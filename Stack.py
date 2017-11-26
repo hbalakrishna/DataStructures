@@ -23,3 +23,5 @@ push(stk, 10)
 push(stk, 20)
 pop(stk)
 
+#############push is not working
+
