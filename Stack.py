@@ -1,5 +1,5 @@
 from sys import maxsize
-
+#Create a
 def createStack():
     Stack = []
     return Stack
