@@ -22,6 +22,8 @@ stk = createStack()
 push(stk, 10)
 push(stk, 20)
 pop(stk)
+pop(stk)
+print(isEmpty(stk))
 
 
 
