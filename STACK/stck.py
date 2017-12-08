@@ -1,4 +1,4 @@
-class Stack:
+class stck:
 
     def __init__(self):
         self.items = []
@@ -21,7 +21,7 @@ class Stack:
     def size(self):
         return len(self.items)
 
-s = Stack()
+s = stck()
 s.push(10)
 s.push(20)
 s.isEmpty()
