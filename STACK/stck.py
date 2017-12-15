@@ -11,9 +11,10 @@ class stck:
 
     def pop(self):
         if self.isEmpty():
-            print("Cant pop out empty list")
+            pass
+            #print("Cant pop out empty list")
         else:
-            print("Poped out {0}".format(self.items.pop(0)))
+            return self.items.pop()
 
     def peek(self):
         return (self.items[0])
@@ -25,8 +26,8 @@ s = stck()
 s.push(10)
 s.push(20)
 s.isEmpty()
-print("Top element is {0}".format(s.peek()))
-print("Size of the Stack is {0}".format(s.size()))
+# print("Top element is {0}".format(s.peek()))
+# print("Size of the Stack is {0}".format(s.size()))
 s.pop()
 s.pop()
 s.pop()
