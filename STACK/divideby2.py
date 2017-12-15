@@ -16,5 +16,9 @@ def divideby2(num):
     return resultString
 
 print(divideby2(2))
+print(divideby2(4))
+print(divideby2(8))
+print(divideby2(16))
+
 
 
