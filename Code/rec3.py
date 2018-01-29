@@ -19,4 +19,3 @@ def removeElement(nums, val):
     """
     b = [i for i in nums if i != val]
     return b
-
