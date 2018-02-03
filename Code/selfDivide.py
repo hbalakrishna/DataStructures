@@ -13,3 +13,9 @@
 # Input: "FlaG"
 # Output: False
 
+a = "USA"
+if a[0].isupper() and a[-1:].isupper():
+    print(a[0])
+for i in a:
+    print(i.isupper())
+
