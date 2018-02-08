@@ -19,3 +19,5 @@ if a[0].isupper() and a[-1:].isupper():
 for i in a:
     print(i.isupper())
 
+import cv2
+a = cv2.x2features2d
