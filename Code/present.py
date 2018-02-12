@@ -12,3 +12,4 @@ print(res)
 
 #set minus set
 print(list(set(range(1, max_ + 1)) - set(a)))
+
