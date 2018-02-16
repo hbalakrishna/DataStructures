@@ -10,7 +10,7 @@ def primes(n):
        primfac.append(n)
     return primfac
 
-ans = primes()
+ans = primes(9)
 chk = [1, 2, 3, 5]
 cnt = 0
 
