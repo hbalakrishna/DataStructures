@@ -1,20 +1,6 @@
 import math
 
-# n = 4
-# count = 0
-#
-# for i in range(2, n):
-#     count_prime = True
-#     for j in range(2, i ):
-#         if i % j == 0:
-#             count_prime = False
-#     if count_prime:
-#             count = count + 1
-#
-# print(count)
-#
-#
-# print(all(n % i for i in range(2, int(math.sqrt(n)) + 1)))
+
 
 def eratosthenes(n):
     prime = [True for i in range(n + 1)]
