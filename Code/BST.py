@@ -21,4 +21,4 @@ class Solution(object):
         root.left = self.createBST(nums, start, mid)
         root.right = self.createBST(nums, mid + 1, end)
 
-        return root
+        return root 
