@@ -56,6 +56,22 @@ class LinkedList:
 
         return res
 
+    def printList(self):
+        temp = self.head
+        while (temp):
+            print(temp.data)
+            temp = temp.next
+
+def intersectionList(head1, head2):
+    while head1:
+        while head2:
+            if head1.data == head2.data:
+                print("Intersection  at Point {0}".format(head2.data))
+                break
+            head2 = head2.next
+        head1 = head1.next
+    print("No Intersection")
+
 
 # Code execution starts here
 if __name__ == '__main__':
@@ -66,4 +82,8 @@ if __name__ == '__main__':
     llist.push(2)
     llist.push(1)
     print("Count of nodes is :", llist.getCount())
+
     print("List Values is", llist.reverseList())
+    llist.printList()
+
+
