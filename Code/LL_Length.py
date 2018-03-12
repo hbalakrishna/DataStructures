@@ -36,16 +36,25 @@ class LinkedList:
             temp = temp.next
         return count
 
+    def reverseList(self):
+        """
+        :type head: ListNode
+        :rtype: ListNode
+        """
 
-    def reverse(self):
-        reversed_ = []
-        ll = self.head
-        while (ll):
-            reversed_.append(ll.data)
-            ll = ll.next
-        return reversed_
+        temp = self.head
+        prev = None
 
+        if not temp:
+            return []
 
+        while temp:
+            res = Node(temp.data)
+            res.next = prev
+            prev = res
+            temp = temp.next
+
+        return res
 
 
 # Code execution starts here
@@ -57,4 +66,4 @@ if __name__ == '__main__':
     llist.push(2)
     llist.push(1)
     print("Count of nodes is :", llist.getCount())
-    print("List Values is", llist.reverse())
+    print("List Values is", llist.reverseList())
