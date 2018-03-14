@@ -73,7 +73,7 @@ def intersectionList(head1, head2):
     print("No Intersection")
 
 
-# Code execution starts here
+
 if __name__ == '__main__':
     llist = LinkedList()
     llist.push(1)
