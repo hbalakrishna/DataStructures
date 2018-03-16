@@ -62,6 +62,34 @@ class LinkedList:
             print(temp.data)
             temp = temp.next
 
+
+
+    def removeDup(self):
+        set_ = set()
+        tmp = self.head
+        while tmp:
+            set_.add(tmp.data)
+        return set_
+
+    def hasCycle(self, head):
+        """
+        :type head: ListNode
+        :rtype: bool
+        """
+        if not head:
+            return False
+
+        slow_ = head
+        fast = head
+
+        while fast and fast.next:
+            slow_ = slow_.next
+            fast = fast.next.next
+            if slow_ == fast:
+                return True
+
+        return False
+
 def intersectionList(head1, head2):
     while head1:
         while head2:
@@ -74,16 +102,20 @@ def intersectionList(head1, head2):
 
 
 
+
+
 if __name__ == '__main__':
     llist = LinkedList()
     llist.push(1)
-    llist.push(3)
+    llist.push(1)
     llist.push(1)
     llist.push(2)
     llist.push(1)
     print("Count of nodes is :", llist.getCount())
 
     print("List Values is", llist.reverseList())
-    llist.printList()
+    print("Set of dups is")
+    remove_dup = llist.removeDup()
+    print(remove_dup)
 
 
