@@ -90,6 +90,81 @@ class LinkedList:
 
         return False
 
+    def detectCycle(self, head):
+        """
+        :type head: ListNode
+        :rtype: ListNode
+        """
+        if not head:
+            return head
+
+        slow_ = head
+        fast = head
+
+        while fast and fast.next:
+            slow_ = slow_.next
+            fast = fast.next.next
+            if slow_ == fast:
+                break
+
+        if fast == None or fast.next == None:
+            return None
+
+        slow_ = head
+        while slow_ != fast:
+            slow_ = slow_.next
+            fast = fast.next
+
+        return fast
+
+    def getIntersectionNode(self, headA, headB):
+        """
+        :type head1, head1: ListNode
+        :rtype: ListNode
+        """
+        if headA is None or headB is None:
+            return None
+
+        startA = headA
+        startB = headB
+        lengthA, tailA = self.getLength(headA)
+        lengthB, tailB = self.getLength(headB)
+
+        if tailA != tailB:
+            return None
+
+        if lengthA > lengthB:
+            longer = startA
+            shorter = startB
+        else:
+            longer = startB
+            shorter = startA
+
+        diff = abs(lengthA - lengthB)
+
+        while longer != None and diff > 0:
+            longer = longer.next
+            diff = diff - 1
+
+        while shorter != longer:
+            shorter = shorter.next
+            longer = longer.next
+
+        return shorter
+
+    def getLength(self, List):
+
+        count_ = 1
+        if not List:
+            return count_
+
+        current = List
+        while current.next != None:
+            count_ += 1
+            current = current.next
+
+        return count_, current
+
 def intersectionList(head1, head2):
     while head1:
         while head2:
