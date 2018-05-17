@@ -12,5 +12,6 @@ for i in a:
 b = [1,2,3,4,5]
 b = b[1:]
 
-print(b)
+a = hash('a')
+print(a)
 
